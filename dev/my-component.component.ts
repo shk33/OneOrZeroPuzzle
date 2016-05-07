@@ -1,4 +1,5 @@
 import {Component} from 'angular2/core';
+import {OnInit} from 'angular2/core';
 import {TestComponent} from './test.component';
 
 @Component({
@@ -23,6 +24,11 @@ import {TestComponent} from './test.component';
   directives: [TestComponent]
 })
 
-export class MyComponentComponent {
-  name = "Lollipop";
+export class MyComponentComponent implements OnInit{
+  name: string;
+
+  ngOnInit():any{
+    this.name = "ngOnInit";
+  }
+
 }
