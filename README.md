@@ -1,20 +1,22 @@
-# Angular 2 Beta Boilerplate
+#OneOrZeroPuzzle
 
-## Description
-This repository acts as a very simple Angular 2 Beta Boilerplate with which you can get started developing Angular 2 immediately.
-It is derived from the official Angular 2 Documentation which can be found [here](https://angular.io/docs/ts/latest/quickstart.html).
-## Usage
-Follow the following steps and you're good to go! Important: Typescript and npm has to be installed on your machine!
+A simple Angular 2 Project, Crack the puzzle by introducing zero or one.
+Getting the correct combination and you'll be congratulated.
 
-1: Clone repo
+##Installation
+Install dependencies
+
+``` 
+  npm install
 ```
-git clone https://github.com/mschwarzmueller/angular-2-beta-boilerplate.git
+
+Run server and watch for changes
+
+``` 
+  npm start
 ```
-2: Install packages
-```
-npm install
-```
-3: Start server (includes auto refreshing) and gulp watcher
-```
-npm start
-```
+
+## Angular 2 Template
+This repository uses a simple Angular 2 Beta Boilerplate with which you can get started developing Angular 2 immediately.
+It is mantained by mschwarzmueller [here](https://github.com/mschwarzmueller/angular-2-beta-boilerplate).
+
