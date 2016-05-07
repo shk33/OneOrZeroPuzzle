@@ -30,4 +30,6 @@
   <input type="text" #switch4 (keyup)="0" /><br />
 </section>
 
-<h2>Congratulations {{name.value}}, you did it!</h2>
+<h2 [hidden]="switch1.value != switch1Number || switch2.value != switch2Number || switch3.value != switch3Number || switch4.value != switch4Number">
+  Congratulations {{name.value}}, you did it!
+</h2>
