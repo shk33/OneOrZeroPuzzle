@@ -1,4 +1,4 @@
-System.register(['angular2/core'], function(exports_1, context_1) {
+System.register(['angular2/core', './test.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,12 +10,15 @@ System.register(['angular2/core'], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
+    var core_1, test_component_1;
     var MyComponentComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (test_component_1_1) {
+                test_component_1 = test_component_1_1;
             }],
         execute: function() {
             MyComponentComponent = (function () {
@@ -25,8 +28,9 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 MyComponentComponent = __decorate([
                     core_1.Component({
                         selector: 'my-component',
-                        template: "\n    Hi, I have {{name}}, \n    <span [class.is-awesome]=\"inputElement.value=='yes'\">\n      Angular 2 is awesome\n    </span>\n    <br/>\n    Is it awesome?\n    <br />\n    Enter 'yes' to make it red\n    <input type=\"text\" #inputElement (keyup)=\"0\"/>\n  ",
-                        styleUrls: ['src/css/mycomponent.css']
+                        template: "\n    Hi, I have <span [style.color]=\"inputElement.value=='yes'? 'red':''\">{{name}}</span>, \n    <span [class.is-awesome]=\"inputElement.value=='yes'\">\n      Angular 2 is awesome\n    </span>\n    <br/>\n    Is it awesome?\n    <br />\n    Enter 'yes' to make it red\n    <input type=\"text\" #inputElement (keyup)=\"0\"/>\n    <br /><br />\n    <button [disabled]=\"inputElement.value=='yes'\">\n      Only enabled if 'yes' was introduced\n    </button>\n    <test></test>\n  ",
+                        styleUrls: ['src/css/mycomponent.css'],
+                        directives: [test_component_1.TestComponent]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], MyComponentComponent);
@@ -37,4 +41,4 @@ System.register(['angular2/core'], function(exports_1, context_1) {
     }
 });
 
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm15LWNvbXBvbmVudC5jb21wb25lbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7WUFrQkE7Z0JBQUE7b0JBQ0UsU0FBSSxHQUFHLFVBQVUsQ0FBQztnQkFDcEIsQ0FBQztnQkFsQkQ7b0JBQUMsZ0JBQVMsQ0FBQzt3QkFDVCxRQUFRLEVBQUUsY0FBYzt3QkFDeEIsUUFBUSxFQUFFLDBRQVVUO3dCQUNELFNBQVMsRUFBRSxDQUFDLHlCQUF5QixDQUFDO3FCQUN2QyxDQUFDOzt3Q0FBQTtnQkFJRiwyQkFBQztZQUFELENBRkEsQUFFQyxJQUFBO1lBRkQsdURBRUMsQ0FBQSIsImZpbGUiOiJteS1jb21wb25lbnQuY29tcG9uZW50LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtDb21wb25lbnR9IGZyb20gJ2FuZ3VsYXIyL2NvcmUnO1xuXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdteS1jb21wb25lbnQnLFxuICB0ZW1wbGF0ZTogYFxuICAgIEhpLCBJIGhhdmUge3tuYW1lfX0sIFxuICAgIDxzcGFuIFtjbGFzcy5pcy1hd2Vzb21lXT1cImlucHV0RWxlbWVudC52YWx1ZT09J3llcydcIj5cbiAgICAgIEFuZ3VsYXIgMiBpcyBhd2Vzb21lXG4gICAgPC9zcGFuPlxuICAgIDxici8+XG4gICAgSXMgaXQgYXdlc29tZT9cbiAgICA8YnIgLz5cbiAgICBFbnRlciAneWVzJyB0byBtYWtlIGl0IHJlZFxuICAgIDxpbnB1dCB0eXBlPVwidGV4dFwiICNpbnB1dEVsZW1lbnQgKGtleXVwKT1cIjBcIi8+XG4gIGAsXG4gIHN0eWxlVXJsczogWydzcmMvY3NzL215Y29tcG9uZW50LmNzcyddXG59KVxuXG5leHBvcnQgY2xhc3MgTXlDb21wb25lbnRDb21wb25lbnQge1xuICBuYW1lID0gXCJMb2xsaXBvcFwiO1xufSJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm15LWNvbXBvbmVudC5jb21wb25lbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7WUF5QkE7Z0JBQUE7b0JBQ0UsU0FBSSxHQUFHLFVBQVUsQ0FBQztnQkFDcEIsQ0FBQztnQkF4QkQ7b0JBQUMsZ0JBQVMsQ0FBQzt3QkFDVCxRQUFRLEVBQUUsY0FBYzt3QkFDeEIsUUFBUSxFQUFFLG9lQWVUO3dCQUNELFNBQVMsRUFBRSxDQUFDLHlCQUF5QixDQUFDO3dCQUN0QyxVQUFVLEVBQUUsQ0FBQyw4QkFBYSxDQUFDO3FCQUM1QixDQUFDOzt3Q0FBQTtnQkFJRiwyQkFBQztZQUFELENBRkEsQUFFQyxJQUFBO1lBRkQsdURBRUMsQ0FBQSIsImZpbGUiOiJteS1jb21wb25lbnQuY29tcG9uZW50LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtDb21wb25lbnR9IGZyb20gJ2FuZ3VsYXIyL2NvcmUnO1xuaW1wb3J0IHtUZXN0Q29tcG9uZW50fSBmcm9tICcuL3Rlc3QuY29tcG9uZW50JztcblxuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAnbXktY29tcG9uZW50JyxcbiAgdGVtcGxhdGU6IGBcbiAgICBIaSwgSSBoYXZlIDxzcGFuIFtzdHlsZS5jb2xvcl09XCJpbnB1dEVsZW1lbnQudmFsdWU9PSd5ZXMnPyAncmVkJzonJ1wiPnt7bmFtZX19PC9zcGFuPiwgXG4gICAgPHNwYW4gW2NsYXNzLmlzLWF3ZXNvbWVdPVwiaW5wdXRFbGVtZW50LnZhbHVlPT0neWVzJ1wiPlxuICAgICAgQW5ndWxhciAyIGlzIGF3ZXNvbWVcbiAgICA8L3NwYW4+XG4gICAgPGJyLz5cbiAgICBJcyBpdCBhd2Vzb21lP1xuICAgIDxiciAvPlxuICAgIEVudGVyICd5ZXMnIHRvIG1ha2UgaXQgcmVkXG4gICAgPGlucHV0IHR5cGU9XCJ0ZXh0XCIgI2lucHV0RWxlbWVudCAoa2V5dXApPVwiMFwiLz5cbiAgICA8YnIgLz48YnIgLz5cbiAgICA8YnV0dG9uIFtkaXNhYmxlZF09XCJpbnB1dEVsZW1lbnQudmFsdWU9PSd5ZXMnXCI+XG4gICAgICBPbmx5IGVuYWJsZWQgaWYgJ3llcycgd2FzIGludHJvZHVjZWRcbiAgICA8L2J1dHRvbj5cbiAgICA8dGVzdD48L3Rlc3Q+XG4gIGAsXG4gIHN0eWxlVXJsczogWydzcmMvY3NzL215Y29tcG9uZW50LmNzcyddLFxuICBkaXJlY3RpdmVzOiBbVGVzdENvbXBvbmVudF1cbn0pXG5cbmV4cG9ydCBjbGFzcyBNeUNvbXBvbmVudENvbXBvbmVudCB7XG4gIG5hbWUgPSBcIkxvbGxpcG9wXCI7XG59Il0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9
